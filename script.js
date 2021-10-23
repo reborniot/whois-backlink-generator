@@ -55,9 +55,12 @@ let whoIsLinkList = [
 ];
 
 document.querySelector('.js-start').addEventListener('click', function(e){
-    const domain = document.querySelector('.js-sitename');
-    whoIsLinkList.forEach(link => {
-        let whoIsLinkWithDomain = link + domain;
-        window.open(whoIsLinkWithDomain, scrollbars="yes",width=800,height=800);
+    const domain = document.querySelector('.js-sitename').value;
+    whoIsLinkList.forEach((link,i) => {
+        setTimeout(() => {
+            let whoIsLinkWithDomain = link + domain;
+            window.open(whoIsLinkWithDomain, scrollbars="yes",width=800,height=800);
+        }, i * 1000);
     });
+    
 });
