@@ -60,7 +60,7 @@ document.querySelector('.js-start').addEventListener('click', function(e){
         setTimeout(() => {
             let whoIsLinkWithDomain = link + domain;
             window.open(whoIsLinkWithDomain, scrollbars="yes",width=800,height=800);
-        }, i * 1000);
+        }, i * 10000);
     });
     
 });
